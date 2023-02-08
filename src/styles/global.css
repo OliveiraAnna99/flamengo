@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&family=Roboto:wght@100;500;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto";
+}
+
+a {
+  color: #ffffff;
+}
+
+.body {
+  max-width: 1440px;
+}
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.cabecalho .menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.cabecalho nav li a {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;
+  /* 10 determina o espaço de altura
+         20 determina o espaço do lado */
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.cabecalho nav li a:hover {
+  background-color: #d5011d;
+}
+
+.body .imagem-fundo {
+  background-color: red;
+  position: absolute;
+  align-items: center;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+}
+.imagem-fundo .estadio {
+  width: 100vw;
+  height: 100vh;
+}
+
+.imagem-fundo::after {
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8015405991498161) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.body .menu nav ul {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.conteudo {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* vh : como se pegasse o tamanho da janela total do usuário e colocasse os elementos de acordo com o tamanho da janela de visualização */
+    /* 132 representa o tamanho do menu */
+    height: calc(100vh - 132px);
+    padding: 0 30px 30px;
+}
+
+.conteudo .titulo{
+    max-width: 500px;
+}
+
+.conteudo .imagem {
+  max-width: 500px;
+}
+
+.conteudo .texto p {
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+    padding-left: 60px;
+}
+
+.conteudo .texto .titulo p {
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1220px) {
+    body {
+      background-color: blueviolet;
+    }
+  
+    .imagem-fundo {
+      display: none;
+    }
+  
+    .conteudo {
+      /* wrap vai dizer: se não tem espaço na tela ao invés de ficar com o scroll, simplesmente jogue esses elementos pra baixo */
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+      gap: 30px;
+    }
+  
+    .conteudo .imagem  {
+      max-width: 50%;
+      align-items: center;
+    }
+  
+    /* .container.informacoes {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    } */
+  
+    .conteudo .texto {
+      color: #ffffff;
+      text-align: center;
+    }
+  
+   
+  }
+  
+  @media (max-width: 500px){
+      body{
+          background-color: yellow;
+      }
+      .cabecalho {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+          width: 100vw;
+      }
+  
+      .conteudo .imagem-titulo{
+          max-width: 75%;
+      }
+  
+      .conteudo .texto{
+          color: #07070e;
+      }
+  
+  }
+  
+
+  
